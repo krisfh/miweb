@@ -1,0 +1,390 @@
+<!--HTML stands for HyperText Markup Language and it’s the standard language for documents designed to be displayed in a web browser.-->
+<!--Container tags: require closing tags. -->
+<!--Empy Tags: The image tag does not require a closing tag.-->
+
+<!--HTML Elements :html,head,title,body..-->
+<!DOCTYPE HTML>  <!--FOR HTML5-->  
+<html> 
+    <!--The head of an HTML file contains all of the non-visual elements that help make the page work.--> 
+    <head>
+        <title>Titulo que describe la página y que usan los buscadores</title>
+    </head>
+    <!--There can only be one <body> element in an HTML document.-->
+    <body>
+        <!--Up to 6 levels of headings-->
+        <!--HTML5 uses HEADER-->
+        <header>
+        <h1>Heading</h1>
+        Line of text.
+        <p>Paragraph.</p>
+        </header>
+        <!-- hr is used to create horizontal lines/ In HTML5, the <hr> tag defines a thematic break.-->
+        <hr>
+        <p>Paragraph2.</p>
+        <!--the <br /> tag adds a single line of text without starting a new paragraph-->
+        <p>This is <br /> a line break</p>
+        <!--Formatting Elements-->
+        <p><b> bold text</b></p>
+        <p><big> big text</big></p>
+        <p><i> italic text</i></p>
+        <p><small> small text </small></p>
+        <p><strong> strong text</strong></p> <!--The <strong> tag is a phrase tag. It defines important text.-->
+        <p><sub> subscripted text </sub></p>
+        <p><sup> superscripted text</sup></p>
+        <p><ins>inserted text</ins></p>
+        <p><del>deleted text</del></p>
+        <p><span></span></p>
+        <!--Attributes-->
+        <!--They provide additional information about an element or a tag, while also modifying them. Most attributes have a value; the value modifies the attribute.-->
+        <!--Attributes are always specified in the start tag, and they appear in name="value" pairs.-->
+        <!--The align attribute of <p> is not supported in HTML5.-->
+        <p align="center"> Text aligned to center</p>
+        <p align="center"> This text to the center <br/>
+        <hr width="10%"" align="right" /> This text to the right </p>
+        <!--Attribute Measurements-->
+        <hr width="50px"/> <!--or with %-->
+        <!--Images-->   
+        <img src="http://www.sololearn.com/images/tree.jpg">
+        <!--not closing tag, only attributes.-->
+        <img src="image.jpg" />
+        <!--The alt attribute specifies an alternate text for an image.-->
+        <img src="tree.jpg" alt="" />
+        <!--Image Resizing: with width and height attributes, in px or %-->
+        <img src="tree.jpg" height="150px" width="150px" alt="" />
+        <!--Image border around the image-->
+        <img src="tree.jpg" height="150px" width="150px" border="1px" alt="" />
+        <!--LISTAS-->
+        <!--Ordered Lists-->
+        <ol>
+            <li>Red</li>
+            <li>Blue</li>
+            <li>Green</li>
+        </ol>
+        <!--Unordered list-->
+        <ul>
+            <li>Red</li>
+            <li>Blue</li>
+            <li>Green</li>
+        </ul>
+        <!--Links reference-->
+        <a href="www.sololearn.com">SoloLean</a>
+        <!--TABLES-->
+        <!--Table data tags <td> act as data containers within the table.
+        They can contain all sorts of HTML elements, such as text, images, lists, other tables, and so on. -->
+        <table>
+            <tr><!--rows-->
+                <td></td> <!--columns-->
+                <td></td>
+            </tr>
+        </table>
+        <!--Border and colspan-->
+        <table border="2">
+            <tr>
+                <td>Red</td>
+                <td>Blue</td>
+                <td>Green</td>
+            </tr>
+            <tr>
+                <td>Yellow</td>
+                <td colspan="2">Orange</td> <!--A table cell can span two or more columns-->
+            </tr>
+            <br>
+            <tr rowspan="3">
+                <td bgcolor="red">Color</td>
+                <td>Black</td>
+                <td>White</td> <!--To make a cell span more than one row, use the rowspan attribute.-->
+            </tr>
+        </table>
+        <!--Table headers-->
+        <tr>
+            <th>Day</th>
+            <th>Month</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th> 
+        </tr>
+        <!--LINKS-->
+        <a href=""></a>
+        <!--To link an image to another document, simply nest the <img> tag inside <a> tags.-->
+        <!--Target Atr: Specifies where to open the linked document-->
+        <a href="www.sololearn.com" target="_blank">Learn </a> <!--_blank value opens links in a new tab--> 
+        <!--INLINE AND BLOCK ELEMENTS-->
+        <!--Block Level:Start from a new line examples: <h1>, <form>, <li>, <ol>, <ul>, <p>, <pre>, <table>, <div>, etc. -->
+            <div style="background-color:blueviolet; color:aqua; padding:20px;"> 
+              <p>Paragraph text.</p>
+            </div>
+        <!--Inline:normally displayed without line breaks examples: <b>, <a>, <strong>, <img>, <input>, <em>, <span>, etc.-->
+            <p> Some <span style="color:red">Important</span> Message </p>   
+        <!--Some elements can be both-->
+        <table>
+            <tr>
+                <td>applet</td>
+                <td>embedded java applet</td>
+            </tr>
+            <tr>
+                <td>iframe</td>
+                <td>inline frame</td>
+            </tr>
+            <tr>
+                <td>ins</td>
+                <td>inserted text</td>
+            </tr>
+            <tr>
+                <td>map</td>
+                <td>image map</td>
+            </tr>
+            <tr>
+                <td>object</td>
+                <td>embedded object</td>
+            </tr>
+            <tr>
+                <td>script</td>
+                <td>script within an html document</td>
+            </tr>
+        </table>
+        <!-- CONTENT MODELS FOR HTML5 :
+        - Metadata >sets up the presentation or behavior of the content - base, link, meta, nonscript, script, style, title
+        - Embedded >imports other resources - audio, video, canvas, iframe, img, math, object, svg
+        - Interactive >for user interaction - a, audio, video, button, details, embed, iframe, img, input, label, object, select, textarea
+        - Heading >defines section header - h1 a h6, hgroup
+        - Phrasing > img, span, strong, label, br, small, sub, ..
+        - Flow > contains the majority of html5 elements included in a normal flow
+        - Sectioning > defines the scope of headings,content, navigation, footers - article, aside, nav, section
+        --> 
+        <a href="https://www.sololearn.com/learning/1014/2191/4340/1"></a>
+        
+        <!--FORMS-->
+        <form></form> <!--Used to collect info from the user-->
+        <!--Action atr: to point to a web after the user submits the form-->
+        <form action="www.sololearn.com"></form>
+        <!--Method and name-->
+        <form action="url" method="get">The form data will be visible in the page adress</form>
+        <form action="url" method="post">Not visible, for updating data or sensitive info like passwords.</form>
+        <!--input : type attribute like text, password, radio, url, submit, etc. -->
+        <form>
+            <input type="text" name="username" placeholder="username"/><br />
+            <input type="password" name="password" />
+        </form>
+        <!--Radio-->
+        <input type="radio" name="gender" value="male" /> Male 
+        <br />
+        <input type="radio" name="gender" value="female" /> female
+        <br />
+        <!--Checkbox-->
+        <input type="checkbox" name="gender" value="1" />Male 
+        <br />
+        <input type="checkbox"  name="gender" value="2" /> Female 
+        <br />
+        <!--Submit-->
+        <input type="submit" value="Submit" /> <!--After the form is submitted, the data should be processed on the server using a programming language, such as PHP.-->
+        <!--COLORS
+            Represented as hexadecimal values: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F 
+            0 is the lowest value and F the highest
+            Displayed in combinations of red, green, blue : RGB  -->
+        <p bgcolor="#000099">1</p>
+        <p font color="#FFFFFF">color</p>
+        <!--FRAMES-->
+        <frame></frame>
+        <frameset></frameset>
+        <iframe></iframe>
+        <!--html5 FORMS-->
+        <form>
+            <label> Name: </label>
+            <input id="user" name="username" type="text" />
+        </form>
+        <!--Use the novalidate attribute to avoid form validation on submissions.-->
+        <form>
+            <label for="email">E-mail Adress: </label>
+            <input type="text" name="email"
+            placeholder="email@example.com" /> <!--placeholder es nuevo atributo html5-->
+        </form>
+        <form>
+            <label for="email"> address: </label>
+            <input type="text" name="email" autofocus/> <!--autofocus makes desired input focus-->
+        </form>
+        <form autocomplete="off">
+            <input name="email" type="text" required/>
+            <input type="submit" value="Submit"/>
+        </form>
+        <!--Other new inputs:
+            HTML5 added several new input types:
+- color
+- date
+- datetime
+- datetime-local
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+
+New input attributes in HTML5:
+- autofocus
+- form
+- formaction
+- formenctype
+- formmethod
+- formnovalidate
+- formtarget
+- height and width
+- list
+- min and max
+- multiple
+- pattern (regexp)
+- placeholder
+- required
+- step
+        -->
+
+        <!--Search box-->
+        <input id="mysearch" name="searchitem" type="search" />
+
+        <!--You must remember to set a name for your input; otherwise, nothing will be submitted.-->
+
+        <!--HTML5 NEW ELEMENTS-->
+
+        <!-- <nav> 
+            a section with navegation links-->
+         <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+         </nav>   
+         <!--Not all of the links in a document should be inside a <nav> element. The <nav> element is intended only for major blocks of navigation links. Typically, the <footer> element often has a list of links that don't need to be in a <nav> element.-->
+        
+        <!-- <article>
+          independent content inside of the site       
+        -->
+        <article>
+            <h1>Title</h1>
+            <p> Content </p>
+        </article>
+        <!-- <section>  
+         Used as logical container to divide content within an article.
+        -->
+        <article>
+            <h1>Welcome</h1>
+            <section>
+                <h1>Heading</h1>
+                <p>Content</p>
+            </section>
+        </article>
+        <!-- <aside>
+            represented in sidebars-->
+        <article>
+            <h1> Gifts</h1>
+            <p>Choose a gift</p>
+            <aside>
+                <p> Given within 24hrs</p>
+            </aside>
+        </article>
+
+        <!--AUDIO  
+        Supported file formats: MP3, WAV, OGG -->
+        <!--one option-->
+        <audio src="audio,mp3" controls>  
+            Audio element not supported by your browser <!--This text will be desplayed if the audio is not supported-->
+        </audio>
+        <!--second option-->
+        <audio controls> 
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.ogg" type="audio/ogg"> <!--Multiple <source> elements can be linked to different audio files. The browser will use the first recognized format.-->
+        </audio>
+        <!--Attributes-->
+        <audio controls></audio> <!--Controls display play,pause, etc.-->
+        <audio controls autoplay></audio>
+        <audio controls autoplay loop></audio> <!--for replay over and over-->
+
+        <!--VIDEO 
+        Supported formats: MP4, WebM, OGG-->
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            <source src="video.ogg" type="video/ogg">
+            Video not supported by your browser
+        </video>
+        <!--Attributes 
+        Same as audio-->
+        <video controls autoplay loop></video>
+
+        <!--PROGRESS BAR
+        Can be used anywhere in the body-->
+        Status: <progress min="0" max="100" value="35"></progress> 
+        <!-- value: how much progress is done
+              max: how much it has to be done -->
+
+        <!--Scalable Vector Graphics-->
+        <img src="image.svg" alt="" height="300"/>
+        <!--Circle-->
+        <svg width="100" height="100">
+            <circle cx="80" cy="80" r="50" fill="green" /> <!-- cx pushes the center of the circle to the right/ cy pushes it down from top/ r is radius/stroke adds outline-->
+        </svg>
+        <!--rect-->
+        <svg width="200" height="200">
+            <rect width="300" height="100" 
+            x="20" y="20" fill="green"/>
+        </svg>
+        <!--line-->
+        <svg width="400" height="400">
+            <line x1="10" y1="10" x2="200" y2="100" 
+            style="stroke:#000000"; stroke-linecap="round";
+            stroke-width="20" />
+        </svg>
+        <!--ellipse-->
+        <!--polygon-->
+
+        <!--Shape Animations-->
+        <svg width="200" height="200">
+            <rect width="300" height="100" fill="green">
+                <animate attributeName="x" from="0" to="300"
+                dir="3s" fill="freeze" repeatCount="2" />
+            </rect>
+        </svg>
+        <!-- To repeat indefinitely use the value indefinite-->
+
+        <!--Paths-->
+
+        <!--CANVAS
+        To draw graphics-->
+        <canvas id="canvas" width="200" height="100"></canvas>
+        <!--Needs JS
+        <canvas id="canvas1" 
+        width="400" height="300"></canvas> 
+
+        <script>
+        var can = document.getElementById("canvas1"); 
+        var ctx = can.getContext("2d");
+        </script> -->
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+    <footer>
+        <p>The following information is usually provided between these tags:
+        - Contact Information
+        - Privacy Policy
+        - Social Media Icons
+        - Terms of Service
+        - Copyright Information
+        - Sitemap and Related Documents</p>
+    </footer>
+</html>

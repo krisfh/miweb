@@ -1,0 +1,429 @@
+/* Cascading Style Sheets*/
+
+/*Inline CSS  **********************
+<p style="color:white; background-color:gray;"</p>*/
+
+/*Internal style  ************************
+An internal style sheet may be used if one single page has a unique style.
+<html>
+ <head>
+  <style>
+   p { 
+     color: white;
+     background-color: gray; 
+   }
+  </style>
+ </head>
+ */
+
+ /*External ***********************
+ Can have relative and absolute paths(same directory or different)
+ <html>
+  <head>
+    <link rel="stylesheet" href="example.css">
+  </head>
+
+  .css document
+
+  p {
+     color:white;
+     background-color:gray;
+  }
+*/
+  /* Syntax ***********************
+
+  Selector-Property-Value */
+  h1 { color:orange;}
+
+
+  /*Type selectors - targets element types  */
+
+  p {
+    color: red;
+    font-size: 120%;
+  }
+
+  /* ID Selectors  - can be applied only once per page
+
+  <div id="intro">
+    <p> Paragraph </p>
+  </div>
+  */
+
+  #intro {
+    color:white;
+    background-color: gray;
+  }
+
+
+  /*Class selectors 
+
+  <div>
+    <p class="first"> Paragraph </p>
+  </div>
+  */
+  
+  .first {font-size: 200%;}
+
+  /*Do NOT start a class or id name with a number!*/
+
+
+  /* Descendant Selectors
+  To select elements inside other ones, by levels.
+
+  <div id="intro">
+    <p class="first"> This is a <em> paragraph. </em> </p>
+    <p> Secong paragraph. </p>
+   </div>
+   <p class="first"> Not in the intro section </p>
+   </p>
+   */
+
+   #intro.first em {
+    color: pink;
+    background-color: gray;
+   }
+
+   /*matches all elements that are descendants of a specified element.*/
+
+
+   /* CASCADE 
+    
+The three main sources of style information that form a cascade are:
+
+- The stylesheet created by the author of the page
+- The browser's default styles
+- Styles specified by the user
+
+ /* INHERITANCE
+
+  Parent element > child element 
+  <html>
+   <head>
+      <style>
+      body {
+         color: green;
+         font-family: Arial;
+      }
+     </style>
+   </head>
+   <body>       
+      <p>
+      This is a text inside the paragraph. 
+      </p>
+   </body>
+</html>
+
+Since the paragraph tag (child element) is inside the body tag (parent element), it takes on any styles assigned to the body tag.*/
+
+/*Font-family Property *****************
+
+Font family
+Generic Family - group of similar look font families
+
+<p class="serif">
+   This is a paragraph shown in serif font.
+</p>
+<p class="sansserif">
+   This is a paragraph shown in sans-serif font.
+</p> 
+<p class="monospace">
+   This is a paragraph shown in monospace font.
+</p> 
+<p class="cursive">
+   This is a paragraph shown in cursive font.
+</p> 
+<p class="fantasy">
+   This is a paragraph shown in fantasy font.
+</p> 
+*/
+
+p.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p.monospace {
+    font-family: 'Courier New', Courier, monospace;
+}
+p.cursive {
+    font-family: florence, cursive;
+}
+p.fantasy {
+    font-family: Blippo, fantasy;
+}
+
+/*It is a good practice to specify a generic font family, to let the browser pick a similar font in the generic family, if no other fonts are available.*/
+
+body { 
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/*FONT-SIZE 
+ xx-small, small, medium, large, larger
+
+ <p class="small"> paragraph </p>
+ <p class="medium"> paragraph </p>
+ <p class="large"> paragraph </p>
+ <p class="xlarge"> paragraph </p>
+
+ Keywords are useful if you do not want the user to be able to increase the size of the font because it will adversely affect your site's appearance.
+*/
+
+p.small {
+    font-size: small;
+}
+p.medium {
+    font-size: medium;
+}
+p.large {
+    font-size: large;
+}
+p.xlarge {
+    font-size: x-large;
+}
+
+/* pixels or em size (em=pixels/16) 
+default size is 16px */
+
+h1 {
+    font-size: 20px;
+}
+h1 {
+    font-size: 1.25em;
+}
+
+/*will give the same size since 20/16=1.25em*/
+
+/*FONT-STYLE **************
+italic, normal, oblique */
+
+p.italic {
+    font-style: italic;
+}
+/* or use <i> in html*/
+
+/* FONT-WEIGHT 
+normal, bold, bolder, lighter
+
+<p class="light"> paragraph </p>
+<p class="bold"> paragraph </p>
+*/
+
+p.light {
+    font-weight: lighter;
+}
+p.bold {
+    font-weight: bold;
+}
+
+/* with numbers: 
+100(thin) to 900(thick)
+400(normal) 700(bold)
+*/
+
+p.thicker {
+    font-weight: 700;
+}
+
+/* or use <strong> in html*/
+
+/*FONT-VARIANT  
+converts font to all small caps(capitals)
+normal, small-caps, inherit
+
+<p class="normal"> paragraph </p>
+<p class="small"> paragraph </p>
+*/
+
+p.normal {
+font-variant: normal;
+}
+
+p.small {
+font-variant: small-caps;
+}
+
+/* COLOR */
+
+p.firstcolor {
+    color: green;
+} 
+
+/*with hexadecimals*/
+
+p.secondcolor {
+    color: #0000FF;
+}
+p.example {
+    color: rgb(255, 0, 0);
+}
+
+/*TEXT-ALIGN 
+Horizontal:
+left, right, center, justify*/
+
+p.left {
+    text-align: left;
+}
+p.right {
+    text-align: right;
+}
+p.center {
+    text-align: center;
+}
+
+/*When text-align is set to "justify", each line is stretched so that every line has equal width, and the left and right margins are straight (as in magazines and newspapers).
+
+/* vertical: top,middle, bottom 
+
+<table border="1" cellpadding="2" cellspacing="0" style="height: 150px;">
+ <tr>
+   <td class="top">Top</td>
+   <td class="middle">Middle</td>
+   <td class="bottom">Bottom</td>
+  <tr>
+ </table>  
+*/
+
+td.top {
+    vertical-align: top;
+}
+td.middle{
+    vertical-align: middle;
+}
+td.bottom {
+    vertical-align: bottom;
+}
+
+/*vertical: baseline, sub, super, %, px(pt,cm)
+
+<p> this is <span class="baseline">inline</span></p>
+<p> this is <span class="pixel"> pixel</span></p>
+*/
+
+span.baseline {
+    vertical-align: baseline;
+}
+span.sub {
+    vertical-align: sub;
+}
+span.super {
+    vertical-align: super;
+}
+span.pixel {
+    vertical-align: -10px;
+}
+
+/*for div elements (and others) need additional css
+
+<div class="main">
+ <div class="paragraph">
+   Text to the middle
+ </div>
+</div>
+*/
+
+.main {
+    height: 150px; width: 400px;
+    background-color: lightskyblue;
+    display: inline-table;
+}
+.paragraph {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*display: inline-table; and display: table-cell; styling rules are applied to make the vertical-align property work with divs.*/
+
+/*TEXT DECORATION
+none, inherit,overline,underline,line-through*/
+
+p.none {
+    text-decoration: none;
+}
+p.inherit {
+    text-decoration: inherit;
+}
+
+/*blink :
+This value is valid but is deprecated and most browsers ignore it.*/
+
+/*TEXT-INDENT
+how much horizontal space should be left before the beginning of the first line of the text.
+lenght (px,pt,cm,em,etc) , %, inherit. Can also be negative values.
+
+<p> Paragraph </p>
+*/
+
+p { 
+    text-indent: 60px;
+}
+
+/*TEXT-SHADOW
+four values: distance in horizontal, distances in vertical, blur, color.
+*/
+
+h1 {
+    color: blue;
+    font-size: 30pt;
+    text-shadow: 5px 2px 4px grey;
+}
+
+h2 {
+    font-size: 20pt;
+    text-shadow: rgba(0,0,255,1) -1px -2px 0.5em;
+}
+
+/*TEXT-TRANSFORM
+how to capitalize elements, for example in each word.*/
+
+p.capitalize {
+    text-transform: capitalize;
+}
+p.uppercase {
+    text-transform: uppercase;
+}
+p.lowercase {
+    text-transform: lowercase;
+}
+
+/*LETTER-SPACING
+space between characters
+values: normal, length ,inherit*/
+
+p.normal {
+    letter-spacing: normal;
+}
+p.positive {
+    letter-spacing: 4px;
+}
+p.negative {
+    letter-spacing: -1.5px;
+}
+
+/*WORD SPACING
+normal,length,inherit*/
+
+p.normal {
+    word-spacing: normal;
+}
+p.px {
+    word-spacing: 30px;
+}
+p.negative {
+    word-spacing: -5px;
+}
+
+/*WHITE SPACE
+normal,inherit,nowrap(makes text continue on the same line before <br>, collapses all sequences of whitespace in one whitespace)
+
+<p> This paragraph has     multiple spaces    and linebreak </p>
+*/
+
+p {
+    white-space: nowrap;
+}
+
+/* White-space values: pre, pre-line, pre-wrap

@@ -1,0 +1,261 @@
+/* THE BOX MODEL : design and layout 
+<a href=https://www.sololearn.com/learning/1023/1099/1262/1/>
+Margins,borders,paddings,content
+Top, right, bottom, left
+
+Every element is a box.
+The box model is also used to calculate the actual width and height of the HTML elements.
+
+WIDTH
+<a href=https://www.sololearn.com/learning/1023/1100/1264/1/>
+
+HEIGHT
+<a href=https://www.sololearn.com/learning/1023/1100/1265/1/>
+
+Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin.
+*/
+
+/*BORDERS
+size,style,color */
+
+p {
+    padding: 10px;
+    border: 5px solid green;
+}
+
+/*properties can be set separately */
+
+p.width {
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+p.color {
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(0, 153, 0);
+}
+
+/*BORDERS 
+None of the border properties will have any effect unless the border-style property is set.
+styles: none, dotted, dashed, double, groove, ridge, inset, outset, hidden.*/
+
+p.dotted {border-style: dotted;}
+
+p.border {
+    border-top-style: dashed;
+    border-right-style: dotted;
+    border-bottom-style: double;
+    border-left-style: groove;
+}
+
+/* Width and Height*/
+
+div {
+    border: 5px solid green;
+    width: 90px;
+    height: 90px;
+}
+
+/*The total width and height of the box will be the 90px+5px (border)+5px(border) = 100px;*/
+
+p.first {
+    border: 5px solid green;
+    min-height: 100px;
+}
+p.second {
+    border: 5px solid green;
+    max-width: 100px;
+}
+
+/*BACKGROUND COLOR*/
+
+body {
+    background-color: #87cefa;
+
+}
+
+/*BACKGROUND-IMAGE*/
+
+body {
+    background-image: url("css_logo.png");
+    background-color: #87cefa;
+}
+
+p {
+    padding: 30px;
+    background-image: url("green_photo.jpg");
+    color: white;
+}
+/*To specify more than one image, just separate the URLs with commas.*/
+
+/*BACKGROUND REPEAT*/
+
+/*horizontally*/
+
+body {
+    background-image: url("css-logo.png");
+    background-repeat: repeat-x;
+}
+
+/*vertically*/
+
+body {
+    background-image: url("css_logo.png");
+    background-repeat: repeat-y;
+}
+
+/*hown only once, use the no-repeat value.*/
+
+/*Inherit
+Takes the value of the element's parent*/
+
+body {
+    background-image: url("css_logo.png");
+    background-repeat: repeat-x;
+}
+p { 
+    background-image: url("css_logo.png");
+    background-repeat: inherit;
+    margin-top: 100px;
+    padding: 40px;
+}
+
+/*BACKGROUND-ATTACHMENT
+fiex,scroll, inherit
+if an image is fixed or scrolls with the rest of the page*/
+
+body {
+    background-image: url("css_logo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body {
+    background-image: url("css_logo.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/*Styling the lists
+For <ol> and <ul> lists>
+Circle, square, decimal, disc, lower-alpha*/
+
+ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+ul.circle {
+    list-style-type: circle;
+}
+ul.square {
+    list-style-type: square;
+}
+
+/*List-style-image 
+image as the list item marker*/
+
+ul {
+    list-style-image: url("logo.jpg");
+    list-style-position: inside;
+}
+
+/*"list-style-position: outside" is the default value.*/
+
+/*For shorter and englobe type,position and image*/
+
+ul {
+    list-style: square outside none;
+}
+
+/*TABLE PROPERTIES*/  
+
+table {
+    border-collapse: separate;
+    border-spacing: 20px 40px;
+}
+
+/*Table caption-side (encabezado de tabla)
+Can be top or bottom*/
+
+caption {
+    caption-side: top;
+}
+
+/*Empy cells:
+show, hide*/
+
+table {
+    border-collapse: separate;
+    empty-cells: hide;
+}
+
+/*Table-layout:
+auto, fixed.
+To specify the width of table columns*/
+
+table {
+    border-collapse: separate;
+    width: 100%;
+    border: 1px solid gray;
+}
+td {
+    border: 1px solid gray;
+}
+table.auto {
+    table-layout: auto;
+}
+table.fixed {
+    table-layout: fixed;
+}
+
+/*Styling LINKS
+
+They can be styled with any css property.
+Pseudo selectors:when a link changes after clicking or visiting the link.
+
+a:link, a:visited, a:active, a:hover.
+
+<p><a href="link.com" target="_blank"</a></p>
+*/
+
+a:hover { 
+    color: red;
+}
+
+/*When setting the style for several link states, there are some order rules:
+- a:hover MUST come after a:link and a:visited
+- a:active MUST come after a:hover*/
+
+/*Link text decoration.
+Like removing the underline*/
+
+a:link {
+    text-decoration: none;
+}
+
+/*also:
+border:none - removes border from images with links
+outline:none - removes the dotted border on clicked lines in IE*/
+
+/*Customizing MOUSE.
+Like: default, crosshair, pointer, help,etc.
+
+<span style="cursor:help;"> Help? </span>
+*/
+
+p {
+    cursor: pointer;
+}
+
+/*Ejemplo*/
+
+body {
+    background-image: url("sample.png");
+    background-repeat: repeat-x;
+}
+a:hover {
+    text-decoration: underline;
+    color: #000000;
+    cursor:crosshair;
+}
